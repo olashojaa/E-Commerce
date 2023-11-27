@@ -20,11 +20,11 @@ class HomeController {
 
         $result=[];
 
-        $topCategories = $this->CategoryModel->getTopCategories();
+        $topCategories = $this->CategoryModel->getTopCategoriesWithTopProducts();
         $result['topCategories']=$topCategories;
 
-        $topProducts = $this->ProductModel->getTopProducts();
-        $result['topProducts']=$topProducts;
+        // $topProducts = $this->ProductModel->getTopProducts();
+        // $result['topProducts']=$topProducts;
 
         $carousel = $this->CarouselModel->getCarousel();
         $result['carousel']=$carousel;

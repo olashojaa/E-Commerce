@@ -1,0 +1,130 @@
+Header{
+  border: 1px solid #d0cdcd ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  z-index: 1000;
+}
+/* navbar */
+.header-nav{
+  display: flex;
+    width: 100%;
+    align-items: center;
+    height: 108px;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.topnav {
+  overflow: hidden;
+  position: sticky;
+    top: 0;
+    
+    padding-top: 0;
+    background-color: #fff;
+
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+    color: #3003a0;
+    padding: 20px 16px;
+}
+
+.topnav a:hover {
+
+  color: black;
+}
+
+.topnav a.active {
+  color: #5a409b;
+  font-weight: 700;
+  position: relative;
+
+}
+
+.topnav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the underline */
+  background-color: #5a409b; /* Adjust the color of the underline */
+}
+.topnav ul{
+  list-style: none;
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+}
+.logo{
+  margin-top: 1.5%;
+
+}
+
+
+/* nav mobile */
+.nav-mobile{
+  display: none !important;
+  text-align: center;
+}
+.menu-toggle-btn{
+  display: none !important;
+}
+.open{
+  display: block !important;
+
+}
+@media (max-width: 576px)
+ {
+  .menu-toggle-btn{
+    display: block !important;
+  }
+  .header-nav{
+    display: none !important;
+
+  }
+  .topnav ul{
+    display: block;
+    align-self: center;
+  }
+  .menu-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .topnav {
+    display: flex;
+    flex-direction: column; /* Updated to column when menu is open */
+    align-items: flex-end;
+    margin-top: 10px;
+    max-height: 0; /* Hide the menu by default */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Add transition for smooth animation */
+  }
+  
+  .navbar.open .topnav {
+    max-height: 500px; /* Set a maximum height for the open menu */
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+  }
+}
+
+
+

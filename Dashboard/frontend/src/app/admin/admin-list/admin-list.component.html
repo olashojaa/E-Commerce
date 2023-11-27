@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Admins</h4>
+        <div class="card">
+            <div class="card-body">
+              <button class="btn btn-primary" (click)="goToAddAdmin()">Add Admins</button>
+    
+    <table class="card-tabel ">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of admins">
+            <td>{{ row.username }}</td>
+            <td>{{ row.email }}</td>
+            <td>{{ row.role }}</td>
+            <td>
+                <button class="btn btn-primary" (click)="editRow(row.id)">Edit</button>
+                <button class="btn btn-danger" (click)="deleteRow(row.id)">Delete</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      </div></div>
+    </div>
+    </div>
+    

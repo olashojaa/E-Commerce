@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Categories</h4>
+        <div class="card">
+            <div class="card-body">
+              <button class="btn btn-primary" (click)="goToAddCategory()">Add Category</button>
+    
+    <table class="card-tabel ">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Is Top</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of categories">
+            <td>{{ row.name }}</td>
+            <td>{{ row.is_top }}</td>
+            <td>
+                <button class="btn btn-primary" (click)="editRow(row.id)">Edit</button>
+                <button class="btn btn-danger" (click)="deleteRow(row.id)">Delete</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      </div></div>
+    </div>
+    </div>
+    

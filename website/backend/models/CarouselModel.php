@@ -12,7 +12,7 @@ class CarouselModel {
 
     public function getCarousel() {
 
-        $stmt = $this->connection->prepare("SELECT p.id as product_id,p.img FROM carousels c join products p on c.product_id=p.id");
+        $stmt = $this->connection->prepare("SELECT p.id as product_id,c.Img FROM carousels c join products p on c.product_id=p.id");
         $stmt->execute();
         $result = $stmt->get_result();
 

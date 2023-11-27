@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Add Carousels</h4>
+        <div class="card">
+            <div class="card-body">
+                       <label for="stock">Please Select Product</label>
+
+                    <select class="form-control" id="product_id" [(ngModel)]="carouselData.product_id">
+                        <option *ngFor="let row of products" value="{{row.id}}">{{row.name}}</option>
+                    </select>
+                    <label for="stock">Carousel Image:</label>
+
+                    <input type="file"   (change)="onFileSelected($event)" />
+<br>
+                
+           
+
+                
+                <button class="btn btn-primary mt-25" (click)="addCarousel()">Add Carousel</button>
+      </div></div>
+    </div>
+    </div>
+    

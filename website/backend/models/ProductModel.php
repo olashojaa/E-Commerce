@@ -63,12 +63,18 @@ class ProductModel {
         return $products;
     }
 
-    public function filterProducts($category_id, $minPrice, $maxPrice,$sortByName) {
+    public function filterProducts($searchQuery,$categories_id, $minPrice, $maxPrice,$sortByName) {
         $query = "SELECT * FROM products WHERE 1";
-
-        if ($category_id) {
-            // If a category is specified, add it to the query
-            $query .= " AND category_id = '$category_id'";
+        if ($searchQuery !== null) {
+            $query .= " AND name like '%$searchQuery%'";
+        }
+        if ($categories_id) {
+            $query.=" And (0";
+            foreach($categories_id as $id)
+            {
+                $query .= " OR category_id = $id";
+            }
+            $query.=")";
         }
 
         if ($minPrice !== null) {
@@ -87,6 +93,7 @@ class ProductModel {
         }
         
         $stmt = $this->connection->prepare($query);
+        
         $stmt->execute();
         $result = $stmt->get_result();
         

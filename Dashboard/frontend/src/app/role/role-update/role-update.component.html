@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Update Role</h4>
+        <div class="card">
+            <div class="card-body">
+                <label for="Name">Role Name:</label>
+                <input class="form-control" type="text" id="RoleName" [(ngModel)]="role.name"/>
+                <label for="Name">Permission:</label>
+
+                <select class="form-control" id="gaurd_name" [(ngModel)]="role.permissions" multiple>
+                    <option *ngFor="let row of permissions" value="{{row.id}}">{{row.name}}</option>
+
+                   
+                </select>
+
+                
+                <button class="btn btn-primary mt-25" (click)="updateRole()">Update Role</button>
+      </div></div>
+    </div>
+    </div>

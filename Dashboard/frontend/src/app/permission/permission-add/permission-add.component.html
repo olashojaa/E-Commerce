@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Add Permission</h4>
+        <div class="card">
+            <div class="card-body">
+                <label for="Name">Permission Name:</label>
+                <input class="form-control" type="text" id="PermissionName" [(ngModel)]="PermissionName"/>
+                <label for="Name">Gaurd Name:</label>
+
+                <select class="form-control" id="gaurd_name" [(ngModel)]="GaurdName">
+                    <option  value="_DashboardComponent">View Dashboard</option>
+                    <option  value="_AdminListComponent">View Admins</option>
+                    <option  value="_AdminAddComponent">Add Admin</option>
+                    <option  value="_AdminUpdateComponent">Update Admin</option>
+                    <option  value="_RoleListComponent">View Roles</option>
+                    <option  value="_RoleAddComponent">Add Role</option>
+                    <option  value="_RoleUpdateComponent">Update Role</option>
+                    <option  value="_PermissionListComponent">View Permission</option>
+                    <option  value="_PermissionAddComponent">Add Permission</option>
+                    <option  value="_PermissionUpdateComponent">Update Permission</option>
+                    <option  value="_ProductListComponent">View Products</option>
+                    <option  value="_ProductAddComponent">Sdd Product</option>
+                    <option  value="_ProductUpdateComponent">Update Product</option>
+                    <option  value="_CategoryListComponent">View Categories</option>
+                    <option  value="_CategoryAddComponent">Add Category</option>
+                    <option  value="_CategoryUpdateComponent">Update Category</option>
+                    <option  value="_CarouselListComponent">View Carousels</option>
+                    <option  value="_CarouselAddComponent">Add Carousel</option>
+                    <option  value="_CarouselUpdateComponent">Update Carousel</option>
+                </select>
+
+                
+                <button class="btn btn-primary mt-25" (click)="addPermission()">Add Permission</button>
+      </div></div>
+    </div>
+    </div>
+    

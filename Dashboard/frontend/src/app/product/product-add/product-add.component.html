@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Add Products</h4>
+        <div class="card">
+            <div class="card-body">
+                <label for="Name">Product Name:</label>
+                <input class="form-control" type="text" id="Name" [(ngModel)]="productData.name"/>
+
+                <label for="Description">Product Short Description:</label>
+                <textarea class="form-control" type="text" id="Description" [(ngModel)]="productData.short_description">
+                    </textarea>
+                    <label for="Description">Product Description:</label>
+
+                    <div class="NgxEditor__Wrapper form-control">
+                        <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+                        <ngx-editor [editor]="editor" [(ngModel)]="productData.description" ></ngx-editor>
+                      </div>
+                    <label for="Price">Product Price:</label>
+                    <input class="form-control" type="number" id="Price" [(ngModel)]="productData.price"/>
+                    <label for="stock">Product Stock:</label>
+                    <input class="form-control" type="number" id="stock" [(ngModel)]="productData.stock"/>
+                    <label for="stock">Please Select Category</label>
+
+                    <select class="form-control" id="category_id" [(ngModel)]="productData.category_id">
+                        <option *ngFor="let row of categories" value="{{row.id}}">{{row.name}}</option>
+                    </select>
+                    <label for="stock">Product Image:</label>
+
+                    <input type="file"   (change)="onFileSelected($event)" />
+<br>
+                <input  type="checkbox" id="IsTop" [(ngModel)]="productData.isTop" >
+                <label for="Name">Want to display Product in Home Page</label><br>
+                
+           
+
+                
+                <button class="btn btn-primary mt-25" (click)="addProduct()">Add Product</button>
+      </div></div>
+    </div>
+    </div>
+    

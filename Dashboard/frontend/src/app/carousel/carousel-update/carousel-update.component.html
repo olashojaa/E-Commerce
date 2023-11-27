@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Update Carousels</h4>
+        <div class="card">
+            <div class="card-body">
+                       <label for="stock">Please Select Product</label>
+
+                    <select class="form-control" id="product_id" [(ngModel)]="carouselData.product_id">
+                        <option *ngFor="let row of products" value="{{row.id}}">{{row.name}}</option>
+                    </select>
+                    <label for="stock">Carousel Image:</label><br>
+                    <img src="{{carouselData.Img}}" width="200" class="mt-25"><br>
+
+                    <input type="file"   (change)="onFileSelected($event)" />
+<br>
+                
+           
+
+                
+                <button class="btn btn-primary mt-25" (click)="updateCarousel()">Update Carousel</button>
+      </div></div>
+    </div>
+    </div>
+    

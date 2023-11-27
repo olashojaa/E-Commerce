@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Products</h4>
+        <div class="card">
+            <div class="card-body">
+              <button class="btn btn-primary" (click)="goToAddProduct()">Add Product</button>
+    
+    <table class="card-tabel ">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Pricr</th>
+            <th>Stock</th>
+            <th>Category</th>
+            <th>Is Top</th>
+            <th>Image</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of products">
+            <td>{{ row.name }}</td>
+            <td>{{ row.price }}</td>
+            <td>{{ row.stock }}</td>
+            <td>{{ row.category_id }}</td>
+            <td>{{ row.is_top }}</td>
+            <td>
+              <img src="{{ row.Img }}" width="150"></td>
+            <td>
+                <button class="btn btn-primary" (click)="editRow(row.id)">Edit</button>
+                <button class="btn btn-danger" (click)="deleteRow(row.id)">Delete</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      </div></div>
+    </div>
+    </div>
+    

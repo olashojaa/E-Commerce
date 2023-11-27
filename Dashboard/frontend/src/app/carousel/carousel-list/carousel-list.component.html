@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Carousels</h4>
+        <div class="card">
+            <div class="card-body">
+              <button class="btn btn-primary" (click)="goToAddCarousel()">Add Carousel</button>
+    
+    <table class="card-tabel ">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Image</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of carousels">
+            <td><a href="/products/edit/{{row.product_id}}">Show Product</a></td>
+      
+            <td>
+              <img src="{{ row.Img }}" width="150"></td>
+            <td>
+                <button class="btn btn-primary" (click)="editRow(row.id)">Edit</button>
+                <button class="btn btn-danger" (click)="deleteRow(row.id)">Delete</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      </div></div>
+    </div>
+    </div>
+    

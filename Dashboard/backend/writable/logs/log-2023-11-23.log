@@ -1,0 +1,51 @@
+CRITICAL - 2023-11-23 21:44:59 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Products->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-23 21:46:45 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Products->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-23 21:48:03 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Products->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-23 21:49:10 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Products->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-23 21:52:46 --> Call to a member function isValid() on null
+in APPPATH\Controllers\Products.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Products->create()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-23 21:55:29 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$img
+in APPPATH\Controllers\Products.php on line 45.
+ 1 APPPATH\Controllers\Products.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$img', 'C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\app\\Controllers\\Products.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Products->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-23 21:56:05 --> Undefined property: CodeIgniter\HTTP\IncomingRequest::$img
+in APPPATH\Controllers\Products.php on line 45.
+ 1 APPPATH\Controllers\Products.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\HTTP\\IncomingRequest::$img', 'C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\app\\Controllers\\Products.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Products->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')

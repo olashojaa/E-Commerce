@@ -1,0 +1,8 @@
+.header{
+    position: fixed;
+    width: 100%;
+}
+.header button{
+    float: right;
+    margin-right: 3%;
+}

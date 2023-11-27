@@ -1,17 +1,23 @@
-import Vue from "vue";
-import Antd from "ant-design-vue";
+import { createApp } from 'vue';
+import App from './App.vue';
+import store from './store';
+import router from './router';
+import './assets/css/main.css';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faBars, faCircleUser, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import VueRouter from 'vue-router';
+import mitt from 'mitt';
+const emitter = mitt();
 
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import "ant-design-vue/dist/antd.css";
+library.add(faBars, faCircleUser, faGlobe);
 
-Vue.config.productionTip = false;
 
-Vue.use(Antd);
+const app = createApp(App);
+app.config.globalProperties.emitter = emitter;
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+app.component('font-awesome-icon', FontAwesomeIcon);
+app.use(store);
+app.use(router);
+app.use(VueRouter);
+app.mount('#app');

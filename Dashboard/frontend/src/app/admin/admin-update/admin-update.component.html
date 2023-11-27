@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Update Admin</h4>
+        <div class="card">
+            <div class="card-body">
+                <label for="Name"> Username:</label>
+                <input class="form-control" type="text" id="Username" [(ngModel)]="admin.username"/>
+
+                <label for="Name"> Email:</label>
+                <input class="form-control" type="text" id="email" [(ngModel)]="admin.email"/>
+
+                <label for="Name">Role:</label>
+                <select class="form-control" id="gaurd_name" [(ngModel)]="admin.role_id" >
+                    <option *ngFor="let row of roles" value="{{row.id}}">{{row.name}}</option>
+
+                   
+                </select>
+
+                
+                <button class="btn btn-primary mt-25" (click)="updateAdmin()">Update Admin</button>
+      </div></div>
+    </div>
+    </div>

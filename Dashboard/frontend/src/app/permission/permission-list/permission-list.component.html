@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Permissions</h4>
+        <div class="card">
+            <div class="card-body">
+              <button class="btn btn-primary" (click)="goToAddPermission()">Add Permissions</button>
+    
+    <table class="card-tabel ">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Gaurd Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of permissions">
+            <td>{{ row.name }}</td>
+            <td>{{ row.gaurd_name }}</td>
+            <td>
+                <button class="btn btn-primary" (click)="editRow(row.id)">Edit</button>
+                <button class="btn btn-danger" (click)="deleteRow(row.id)">Delete</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      </div></div>
+    </div>
+    </div>
+    

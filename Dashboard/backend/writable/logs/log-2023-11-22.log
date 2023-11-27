@@ -1,0 +1,911 @@
+CRITICAL - 2023-11-22 20:13:59 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-11-22 20:13:59 --> Uncaught Error: Class "Locale" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Debug\Exceptions.php(148): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-11-22 19:34:00 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->index()
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->index()
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-22 19:34:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categories`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:36:20 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->index()
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->index()
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-22 19:36:20 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categories`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:36:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->index()
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->index()
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-22 19:36:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categories`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:36:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->index()
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->index()
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-22 19:36:33 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `categories`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Categories.php(23): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-22 19:41:09 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 1726.
+ 1 SYSTEMPATH\BaseModel.php(1726): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(748): CodeIgniter\BaseModel->transformDataToArray(null, 'insert')
+ 3 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert(null, true)
+ 4 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert(null)
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-22 19:41:54 --> Allowed fields must be specified for model: "App\Models\CategoryModel"
+in SYSTEMPATH\Model.php on line 736.
+ 1 SYSTEMPATH\Model.php(736): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoryModel')
+ 2 SYSTEMPATH\BaseModel.php(763): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-22 19:43:00 --> Allowed fields must be specified for model: "App\Models\CategoryModel"
+in SYSTEMPATH\Model.php on line 736.
+ 1 SYSTEMPATH\Model.php(736): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoryModel')
+ 2 SYSTEMPATH\BaseModel.php(763): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-22 19:43:48 --> Allowed fields must be specified for model: "App\Models\CategoryModel"
+in SYSTEMPATH\Model.php on line 736.
+ 1 SYSTEMPATH\Model.php(736): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\CategoryModel')
+ 2 SYSTEMPATH\BaseModel.php(763): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:44:23 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:44:23 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:45:05 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:45:05 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:45:16 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:45:16 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:45:21 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(563): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(31): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->show('1')
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-22 19:45:21 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_categories`
+WHERE `db_categories`.`id` = :categories.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(563): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Categories.php(31): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:46:09 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:46:09 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:46:30 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:46:30 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:46:34 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(563): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(31): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->show('1')
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-22 19:46:34 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_categories`
+WHERE `db_categories`.`id` = :categories.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(563): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Categories.php(31): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:49:53 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:49:53 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:52:03 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:52:03 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:52:04 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:52:04 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:52:22 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:52:22 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:52:45 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:52:45 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:56:34 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:56:34 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:56:36 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(563): CodeIgniter\Model->doFind(true, '1')
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(31): CodeIgniter\BaseModel->find('1')
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->show('1')
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-22 19:56:36 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_categories`
+WHERE `db_categories`.`id` = :categories.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(196): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(563): CodeIgniter\Model->doFind(true, '1')
+ 6 APPPATH\Controllers\Categories.php(31): CodeIgniter\BaseModel->find('1')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:56:56 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:56:56 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 19:56:58 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 19:56:58 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 20:00:41 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 20:00:41 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 20:01:07 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 20:01:07 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 20:01:26 --> Error connecting to the database: Error: Class "SQLite3" not found in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php:89
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 20:01:26 --> Unable to connect to the database.
+Main connection [SQLite3]: Class "SQLite3" not found
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(59): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 20:01:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('127.0.0.1', '', Object(SensitiveParameterValue), ':memory:', 3306, '', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-11-22 20:01:54 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 3 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 4 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 5 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 20:02:29 --> mysqli_sql_exception: Table 'unifi_ecommerce.db_categories' doesn't exist in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `db...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `db...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `db...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 20:02:29 --> Table 'unifi_ecommerce.db_categories' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-22 20:03:02 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ca...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ca...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ca...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ca...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\system\BaseModel.php(788): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Model.php(715): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Categories->create()
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2023-11-22 20:03:02 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `categories` (`name`, `is_top`, `created_at`, `updated_at`) VALUES (:name:, :is_top:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(319): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(788): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(715): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Categories.php(45): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Categories->create()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')

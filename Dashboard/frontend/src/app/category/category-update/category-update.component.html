@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Update Categories</h4>
+        <div class="card">
+            <div class="card-body">
+                <label for="Name">Category Name:</label>
+                <input class="form-control" type="text" id="CategoryName" [(ngModel)]="category.name"/>
+                <input   type="checkbox" id="categoryIsTop" [(ngModel)]="category.is_top" >
+                <label for="Name">Want to display Category in Home Page</label><br>
+
+                
+                <button class="btn btn-primary mt-25" (click)="updateCategory()">Add Category</button>
+      </div></div>
+    </div>
+    </div>
+    

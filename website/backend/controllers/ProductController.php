@@ -20,12 +20,13 @@ class ProductController {
     public function filterProducts($params) {
        
         // Validate and sanitize user input
-        $category_id = isset($params['category_id']) ? $this->validateNumeric($params['category_id']) : null;
+        $categories_id = isset($params['checkedcategories']) ? $params['checkedcategories'] : null;
+        $searchQuery = isset($params['searchQuery']) ? $this->validateString($params['searchQuery']) : null;
         $minPrice = isset($params['minPrice']) ? $this->validateNumeric($params['minPrice']) : null;
         $maxPrice = isset($params['maxPrice']) ? $this->validateNumeric($params['maxPrice']) : null;
         $sortByName = isset($params['sortByName']) ? $this->validatesort($params['sortByName']) : null;
 
-        $filteredProducts = $this->ProductModel->filterProducts($category_id, $minPrice, $maxPrice,$sortByName);
+        $filteredProducts = $this->ProductModel->filterProducts($searchQuery,$categories_id, $minPrice, $maxPrice,$sortByName);
 
         JsonView::render($filteredProducts);
     }
@@ -42,6 +43,12 @@ class ProductController {
         //check if $num is numeric
         return is_numeric($num) ? $num : null;
     }
+
+    private function validateString ($str) {
+        
+        return is_string($str) ? $str : null;
+    }
+
 
     private function validatesort($sort) {
 

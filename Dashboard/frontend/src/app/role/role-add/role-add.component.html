@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title fw-semibold ">Add Role</h4>
+        <div class="card">
+            <div class="card-body">
+                <label for="Name">Role Name:</label>
+                <input class="form-control" type="text" id="RoleName" [(ngModel)]="RoleName"/>
+                <label for="Name">Permission:</label>
+
+                <select class="form-control" id="gaurd_name" [(ngModel)]="permissions_selected" multiple>
+                    <option *ngFor="let row of permissions" value="{{row.id}}">{{row.name}}</option>
+
+                   
+                </select>
+
+                
+                <button class="btn btn-primary mt-25" (click)="addRole()">Add Role</button>
+      </div></div>
+    </div>
+    </div>

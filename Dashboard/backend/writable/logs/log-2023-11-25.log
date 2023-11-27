@@ -1,0 +1,140 @@
+CRITICAL - 2023-11-25 19:58:00 --> Call to a member function permissions() on array
+in APPPATH\Controllers\Roles.php on line 94.
+ 1 APPPATH\Controllers\Roles.php(53): App\Controllers\Roles->addPermission(2, '1')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:00:40 --> Call to a member function permissions() on array
+in APPPATH\Controllers\Roles.php on line 94.
+ 1 APPPATH\Controllers\Roles.php(54): App\Controllers\Roles->addPermission(5, '1')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:01:38 --> Call to a member function permissions() on array
+in APPPATH\Controllers\Roles.php on line 94.
+ 1 APPPATH\Controllers\Roles.php(54): App\Controllers\Roles->addPermission(6, '1')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:05:42 --> Attempt to read property "permissions" on array
+in APPPATH\Controllers\Roles.php on line 88.
+ 1 APPPATH\Controllers\Roles.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "permissions" on array', 'C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\app\\Controllers\\Roles.php', 88)
+ 2 APPPATH\Controllers\Roles.php(54): App\Controllers\Roles->addPermission(7, '1')
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->create()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:06:05 --> Call to a member function permissions() on array
+in APPPATH\Controllers\Roles.php on line 88.
+ 1 APPPATH\Controllers\Roles.php(54): App\Controllers\Roles->addPermission(8, '1')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:06:41 --> Call to a member function permissions() on array
+in APPPATH\Controllers\Roles.php on line 89.
+ 1 APPPATH\Controllers\Roles.php(54): App\Controllers\Roles->addPermission(9, '1')
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->create()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:11:05 --> Call to undefined method App\Models\RoleModel::belongsToMany
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\RoleModel.php(43): CodeIgniter\Model->__call('belongsToMany', [...])
+ 2 APPPATH\Controllers\Roles.php(90): App\Models\RoleModel->permissions()
+ 3 APPPATH\Controllers\Roles.php(54): App\Controllers\Roles->addPermission(11, '1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:21:06 --> Call to undefined method App\Models\RoleModel::belongsToMany
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\RoleModel.php(45): CodeIgniter\Model->__call('belongsToMany', [...])
+ 2 APPPATH\Controllers\Roles.php(90): App\Models\RoleModel->permissions()
+ 3 APPPATH\Controllers\Roles.php(54): App\Controllers\Roles->addPermission(12, '1')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->create()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:56:00 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Roles.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->show('13')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:57:16 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\Roles.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->show('13')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 20:57:54 --> Undefined array key "permissions"
+in APPPATH\Controllers\Roles.php on line 80.
+ 1 APPPATH\Controllers\Roles.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "permissions"', 'C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\app\\Controllers\\Roles.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->update('13')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+ERROR - 2023-11-25 20:59:00 --> mysqli_sql_exception: Table 'unifi_ecommerce.role_permission' doesn't exist in C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Models\RoleModel.php(69): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\unifi test\Dashboard\backend\app\Controllers\Roles.php(82): App\Models\RoleModel->hasPermission('13', '3')
+#6 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(942): App\Controllers\Roles->update('13')
+#7 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+#8 C:\xampp\htdocs\unifi test\Dashboard\backend\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\unifi test\Dashboard\backend\public\index.php(82): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\unifi test\Dashboard\backend\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-11-25 20:59:00 --> Table 'unifi_ecommerce.role_permission' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `role_permission`
+WHERE `role_id` = :role_id:
+AND `permission_id` = :permission_id:', [...], false)
+ 2 APPPATH\Models\RoleModel.php(69): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH\Controllers\Roles.php(82): App\Models\RoleModel->hasPermission('13', '3')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Roles->update('13')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Roles))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 22:30:57 --> openssl_sign(): Supplied key param cannot be coerced into a private key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 253.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'openssl_sign(): Supplied key param cannot be coerced into a private key', 'C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\vendor\\firebase\\php-jwt\\src\\JWT.php', 253)
+ 2 VENDORPATH\firebase\php-jwt\src\JWT.php(253): openssl_sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzM4NCJ9.eyJwZXJtaXNzaW9uIjpbeyJpZCI6IjEiLCJuYW1lIjoiVXBkYXRlIENhcm91c2VsIn0seyJpZCI6IjIiLCJuYW1lIjoiVmlldyBBZG1pbiJ9LHsiaWQiOiIzIiwibmFtZSI6IkFkZCBBZG1pbiJ9LHsiaWQiOiI0IiwibmFtZSI6IlVwZGF0ZSBBZG1pbiJ9LHsiaWQiOiI1IiwibmFtZSI6IlZpZXcgUm9sZXMifSx7ImlkIjoiNiIsIm5hbWUiOiJBZGQgUm9sZSJ9LHsiaWQiOiI3IiwibmFtZSI6IlVwZGF0ZSBSb2xlIn0seyJpZCI6IjkiLCJuYW1lIjoiQWRkIENhcm91c2VsIn0seyJpZCI6IjEwIiwibmFtZSI6IlZpZXcgQ2Fyb3VzZWwifSx7ImlkIjoiMTEiLCJuYW1lIjoiVmlldyBQZXJtaXNzaW9uIn0seyJpZCI6IjEyIiwibmFtZSI6IkFkZCBQZXJtaXNzaW9uIn0seyJpZCI6IjEzIiwibmFtZSI6IlVwZGF0ZSBQZXJtaXNzaW9uIn0seyJpZCI6IjE0IiwibmFtZSI6IlZpZXcgUHJvZHVjdHMifSx7ImlkIjoiMTUiLCJuYW1lIjoiQWRkIFByb2R1Y3QifSx7ImlkIjoiMTYiLCJuYW1lIjoiVXBkYXRlIFByb2R1Y3QifSx7ImlkIjoiMTciLCJuYW1lIjoiVmlldyBDYXRlZ29yeSJ9LHsiaWQiOiIxOCIsIm5hbWUiOiJBZGQgQ2F0ZWdvcnkifSx7ImlkIjoiMTkiLCJuYW1lIjoiVXBkYXRlIENhdGVnb3J5In0seyJpZCI6IjIwIiwibmFtZSI6IlZpZXcgRGFzaGJvYXJkIn1dLCJyb2xlX2lkIjoiMTUiLCJ1aWQiOiI0IiwiZW1haWwiOiJvbGFzaG9qYWEzQGdtYWlsLmNvbSJ9', '', Object(SensitiveParameterValue), 'SHA384')
+ 3 VENDORPATH\firebase\php-jwt\src\JWT.php(218): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzM4NCJ9.eyJwZXJtaXNzaW9uIjpbeyJpZCI6IjEiLCJuYW1lIjoiVXBkYXRlIENhcm91c2VsIn0seyJpZCI6IjIiLCJuYW1lIjoiVmlldyBBZG1pbiJ9LHsiaWQiOiIzIiwibmFtZSI6IkFkZCBBZG1pbiJ9LHsiaWQiOiI0IiwibmFtZSI6IlVwZGF0ZSBBZG1pbiJ9LHsiaWQiOiI1IiwibmFtZSI6IlZpZXcgUm9sZXMifSx7ImlkIjoiNiIsIm5hbWUiOiJBZGQgUm9sZSJ9LHsiaWQiOiI3IiwibmFtZSI6IlVwZGF0ZSBSb2xlIn0seyJpZCI6IjkiLCJuYW1lIjoiQWRkIENhcm91c2VsIn0seyJpZCI6IjEwIiwibmFtZSI6IlZpZXcgQ2Fyb3VzZWwifSx7ImlkIjoiMTEiLCJuYW1lIjoiVmlldyBQZXJtaXNzaW9uIn0seyJpZCI6IjEyIiwibmFtZSI6IkFkZCBQZXJtaXNzaW9uIn0seyJpZCI6IjEzIiwibmFtZSI6IlVwZGF0ZSBQZXJtaXNzaW9uIn0seyJpZCI6IjE0IiwibmFtZSI6IlZpZXcgUHJvZHVjdHMifSx7ImlkIjoiMTUiLCJuYW1lIjoiQWRkIFByb2R1Y3QifSx7ImlkIjoiMTYiLCJuYW1lIjoiVXBkYXRlIFByb2R1Y3QifSx7ImlkIjoiMTciLCJuYW1lIjoiVmlldyBDYXRlZ29yeSJ9LHsiaWQiOiIxOCIsIm5hbWUiOiJBZGQgQ2F0ZWdvcnkifSx7ImlkIjoiMTkiLCJuYW1lIjoiVXBkYXRlIENhdGVnb3J5In0seyJpZCI6IjIwIiwibmFtZSI6IlZpZXcgRGFzaGJvYXJkIn1dLCJyb2xlX2lkIjoiMTUiLCJ1aWQiOiI0IiwiZW1haWwiOiJvbGFzaG9qYWEzQGdtYWlsLmNvbSJ9', 'cskhfuwt48wbfjn3i4utnjf38754hf3yfbjc93758thrjsnf83hcwn8437', 'ES384')
+ 4 APPPATH\Controllers\AuthController.php(40): Firebase\JWT\JWT::encode([...], 'cskhfuwt48wbfjn3i4utnjf38754hf3yfbjc93758thrjsnf83hcwn8437', 'ES384')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
+CRITICAL - 2023-11-25 22:31:15 --> openssl_sign(): Supplied key param cannot be coerced into a private key
+in VENDORPATH\firebase\php-jwt\src\JWT.php on line 253.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'openssl_sign(): Supplied key param cannot be coerced into a private key', 'C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\vendor\\firebase\\php-jwt\\src\\JWT.php', 253)
+ 2 VENDORPATH\firebase\php-jwt\src\JWT.php(253): openssl_sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzM4NCJ9.eyJwZXJtaXNzaW9uIjpbeyJpZCI6IjEiLCJuYW1lIjoiVXBkYXRlIENhcm91c2VsIn0seyJpZCI6IjIiLCJuYW1lIjoiVmlldyBBZG1pbiJ9LHsiaWQiOiIzIiwibmFtZSI6IkFkZCBBZG1pbiJ9LHsiaWQiOiI0IiwibmFtZSI6IlVwZGF0ZSBBZG1pbiJ9LHsiaWQiOiI1IiwibmFtZSI6IlZpZXcgUm9sZXMifSx7ImlkIjoiNiIsIm5hbWUiOiJBZGQgUm9sZSJ9LHsiaWQiOiI3IiwibmFtZSI6IlVwZGF0ZSBSb2xlIn0seyJpZCI6IjkiLCJuYW1lIjoiQWRkIENhcm91c2VsIn0seyJpZCI6IjEwIiwibmFtZSI6IlZpZXcgQ2Fyb3VzZWwifSx7ImlkIjoiMTEiLCJuYW1lIjoiVmlldyBQZXJtaXNzaW9uIn0seyJpZCI6IjEyIiwibmFtZSI6IkFkZCBQZXJtaXNzaW9uIn0seyJpZCI6IjEzIiwibmFtZSI6IlVwZGF0ZSBQZXJtaXNzaW9uIn0seyJpZCI6IjE0IiwibmFtZSI6IlZpZXcgUHJvZHVjdHMifSx7ImlkIjoiMTUiLCJuYW1lIjoiQWRkIFByb2R1Y3QifSx7ImlkIjoiMTYiLCJuYW1lIjoiVXBkYXRlIFByb2R1Y3QifSx7ImlkIjoiMTciLCJuYW1lIjoiVmlldyBDYXRlZ29yeSJ9LHsiaWQiOiIxOCIsIm5hbWUiOiJBZGQgQ2F0ZWdvcnkifSx7ImlkIjoiMTkiLCJuYW1lIjoiVXBkYXRlIENhdGVnb3J5In0seyJpZCI6IjIwIiwibmFtZSI6IlZpZXcgRGFzaGJvYXJkIn1dLCJyb2xlX2lkIjoiMTUiLCJ1aWQiOiI0IiwiZW1haWwiOiJvbGFzaG9qYWEzQGdtYWlsLmNvbSJ9', '', Object(SensitiveParameterValue), 'SHA384')
+ 3 VENDORPATH\firebase\php-jwt\src\JWT.php(218): Firebase\JWT\JWT::sign('eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzM4NCJ9.eyJwZXJtaXNzaW9uIjpbeyJpZCI6IjEiLCJuYW1lIjoiVXBkYXRlIENhcm91c2VsIn0seyJpZCI6IjIiLCJuYW1lIjoiVmlldyBBZG1pbiJ9LHsiaWQiOiIzIiwibmFtZSI6IkFkZCBBZG1pbiJ9LHsiaWQiOiI0IiwibmFtZSI6IlVwZGF0ZSBBZG1pbiJ9LHsiaWQiOiI1IiwibmFtZSI6IlZpZXcgUm9sZXMifSx7ImlkIjoiNiIsIm5hbWUiOiJBZGQgUm9sZSJ9LHsiaWQiOiI3IiwibmFtZSI6IlVwZGF0ZSBSb2xlIn0seyJpZCI6IjkiLCJuYW1lIjoiQWRkIENhcm91c2VsIn0seyJpZCI6IjEwIiwibmFtZSI6IlZpZXcgQ2Fyb3VzZWwifSx7ImlkIjoiMTEiLCJuYW1lIjoiVmlldyBQZXJtaXNzaW9uIn0seyJpZCI6IjEyIiwibmFtZSI6IkFkZCBQZXJtaXNzaW9uIn0seyJpZCI6IjEzIiwibmFtZSI6IlVwZGF0ZSBQZXJtaXNzaW9uIn0seyJpZCI6IjE0IiwibmFtZSI6IlZpZXcgUHJvZHVjdHMifSx7ImlkIjoiMTUiLCJuYW1lIjoiQWRkIFByb2R1Y3QifSx7ImlkIjoiMTYiLCJuYW1lIjoiVXBkYXRlIFByb2R1Y3QifSx7ImlkIjoiMTciLCJuYW1lIjoiVmlldyBDYXRlZ29yeSJ9LHsiaWQiOiIxOCIsIm5hbWUiOiJBZGQgQ2F0ZWdvcnkifSx7ImlkIjoiMTkiLCJuYW1lIjoiVXBkYXRlIENhdGVnb3J5In0seyJpZCI6IjIwIiwibmFtZSI6IlZpZXcgRGFzaGJvYXJkIn1dLCJyb2xlX2lkIjoiMTUiLCJ1aWQiOiI0IiwiZW1haWwiOiJvbGFzaG9qYWEzQGdtYWlsLmNvbSJ9', 'cskhfuwt48wbfjn3i4utnjf38754hf3yfbjc93758thrjsnf83hcwn8437', 'ES384')
+ 4 APPPATH\Controllers\AuthController.php(40): Firebase\JWT\JWT::encode([...], 'cskhfuwt48wbfjn3i4utnjf38754hf3yfbjc93758thrjsnf83hcwn8437', 'ES384')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AuthController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(82): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\unifi test\\Dashboard\\backend\\public\\index.php')
